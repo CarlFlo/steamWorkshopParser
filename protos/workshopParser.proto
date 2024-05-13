@@ -1,0 +1,15 @@
+syntax = "proto3";
+package workshopParser;
+option go_package = "./workshopParser";
+
+message Response {
+    string result = 1;
+}
+
+message Request {
+    string url = 1;
+}
+
+service workshopParser {
+    rpc ParseWorkshopItem(Request) returns (Response) {}
+}
